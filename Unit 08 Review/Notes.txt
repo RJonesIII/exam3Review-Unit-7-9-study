@@ -1,0 +1,91 @@
+Lots of Sorting
+Solo Study
+
+List Review
+- Remember when using the List function to define a list, use parenthesis
+- Ex. variable = list("def") will return a list that looks like [ 'd', 'e' , 'f' ]
+- You can only concatenate lists with other lists with the plus sign obviously
+- Lists are sequences of values, and 2d Lists are lists of lists
+
+
+
+
+
+Sorting
+- Refers to rearranging the elements within into a certain order, must determine which comes first in NATURAL ORDER
+      - Smallest to Largest
+      - Largest to Smallest
+      - Alphabetic Order 
+      - More
+- In-place sort - Done by rearranging the elements with the data structure, considered destructive because the original arrangement isn't saved
+- Out of Place sort - Leaves the original data alone, and creates a sorted copy
+- We must determine the natural order, which is the needed order based on the context
+
+Insertion Sort
+- Begins by dividing the list into two parts, not really, but it's put into a sorted portion and unsorted 
+- At the beginning of each iteration, the left most element in the unsorted partition is basically the rightmost position in the sorted partition
+- If the new element is out of place in the natural order (sorted partition), it'll move to the left until it's in the right spot
+- Repeats until everything is sorted
+- (Shifting Refers to repeatedly moving elements by one position to the left or right)
+- Just cooked :)
+
+Naive Sorts
+- Very simple sorting algorithms that are easy to grasp but inefficient
+- Focuses when dealing with Naive Sorts
+     - Insertion Sort 
+     - Function Parameters
+     - Comparators
+     - Complexity Comparison
+
+Divide and Conquer Algorithms
+- The list is divided into smaller parts 
+- Then conquered by being sorted and put back together
+- Merge Sort and Quick Sort
+
+
+Merge Sort
+- Begins by breaking the unsorted list into unsorted halves, each half is recursively split into smaller halves until they all have the size of 1
+- When the halves are being put back together, separate counters for each half are used to index and compare values of the halves at different points
+- The one that's less than the other is appended to the merged variable which contains an empty list and it's counter value goes up by one then it's compared with the same number of the opposite half
+- If one of the halves is completely appended then the rest of the half is appended all at once if there are remnants
+
+Quick Sort
+- 
+
+
+
+
+Time Complexity
+Linear Search - Best Case = O(c), Worst Case = O(n)
+Binary Search - Best Case = O(c), Worst Case = O(logn)
+Insertion Sort - Best Case = O(n),  Worst Case = O(n²)
+Merge Sort - O(nlogn) 
+Quick Sort - Best Case = O(n), Av = O(nlogn), Worse Case = O(n²)
+Time Complexity Rankings (Best to Worse)
+- O(1) or O(C)
+- O(log n)
+- O(n)
+- O(n log n)
+- O(n^2)
+- O(2^n)
+- O(n!)
+
+
+
+
+You can return multiple values at once if you set it to the same number of variables
+- function returns x,y,z
+- variableA, variableB, variableC = function - therefore unpacking the tuple
+- If returned and set to a single variable, it packs the values into a tuple
+
+Assigning Functions to Variables
+You can assign functions that return things to variables
+def square(para):
+     para**para
+     
+a = square
+print(a(5))
+
+- This will return 25
+
+

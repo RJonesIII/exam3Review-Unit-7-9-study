@@ -1,0 +1,81 @@
+Lists and Tuples
+
+Reminder - Sequences
+- Strings are sequences of characters
+- Ranges are sequences of integers
+- Records are sequences of fields in the a CSV file
+- Arrays are sequences of anything
+Common
+- You can find the length with the built in length function
+- You can also index them
+- Also a fixed length
+
+Tuples
+- Elements cannot be changed
+- Are sequences of data
+- Created by using parenthesis and a list of values separated by commas
+- Can also be created with command - tuple("values") and it'll take every single character and put them into a tuple so this would return ['v','a','l','u','e','s']
+- You can also do tuple(range(10)) and it'll return all the integers in that range
+Packing
+- You can return a tuple from a function and set those values to variables in your main function by using commas for ex. a,b,c = multiple_return() will go through if that function returns a,b,c 
+- It must either be set to one variable or the return quantity must match the variable quantity
+
+
+Lists
+- Elements can be changed
+- You can put lists inside of tuples
+- Lists are created similar to tuples, but you use brackets instead of parenthesis
+- They can also be created with the list() command
+- Values can appended or added to the end of lists which will obviously change the size, this function is used with dot notation so list_name.append(123) will add 123
+- You can also insert values that will put a value in a certain spot and move the rest of them to the right, by using the command list_name.insert(location,value) it will put the value there and move the rest
+- You can remove the last value and set it to a variable if you want, by using the pop() command in dot notation, or you can specify which index you want to delete by putting the in the number but it defaults to the last value .pop(location)
+
+List Concatenation
+-  You can concatenate lists together just by adding them together, if it's not enclosed in brackets, a type error will form
+- You can use a+=b to assign the concatenation to the first variable
+
+
+Constant Times
+- An algorithm that runs in constant time always executes the same numbers of operations regardless of the size of the input
+
+
+Value Types
+- Basically saying values that are altered in functions aren't really affected outside it, because they are copies of it when used as parameters, for example parameters
+- Called "passing by value"
+References Types
+- Types like arrays or lists that when altered in a function, it take on a permanent change and will persist after the function returns
+- Called "passing by reference"
+
+
+Equalities
+- Shallow Equality refers to comparing two variables to see if they are the exact same thing
+- Deep Equality refers to comparing two variables to see if they have the same value 
+
+Extras:
+- The 'is' comparison operator checks for data type and value while == just checks for value
+
+
+You can define a list using (List Comprehension)
+- variable = ["x" for i in range(num)]
+- This would put 10 x's in a list, you can put numbers and equations in the place of "x" too
+- variable = [ i for i in range(20) if i % 3 == 0 ]
+- Would create a list that would print values of i as long as it's a multiple of 3
+
+
+2 Dimensional Lists - Tables
+- Basically a list of lists, list[row][column], kinda like y,x
+- To find how many floors a list has, do len(list_name)
+- Sequences of rows so you can do for row in table
+- You can call different parts of a table by example print(table[floor][column]
+- You can define a table by setting it equal to [floor1, value, value] , [floor2, value, value] and by separating the lists with commas creates new floors
+
+
+Sorted Function
+- dot notation .sort() to sort all of the values least to greatest
+- dot notation .sort(reverse=True to sort all of the values greatest to least
+- cast sorted(data)
+- By using keys we can specify how we want something sorted
+- a.sort(key=len) will compare it by length
+- a.sort(key=str.lower) will compare strings as if they were all lowercase
+- You can also have a custom key that's based off a function .sort(key=function_name)
+- Your custom sorting algorithm will be defined in that function

@@ -1,0 +1,86 @@
+Review on Data Structures
+- Values in a data structure are called elements
+
+
+Given - Timing Module (timing.py)
+- timing.time_function
+      - Prints the name of the function
+      - Calls the function with any arguments that have been provided (*args - used to pass in zero or more additional arguments as needed)
+      - Prints the elapsed time, doesn't return
+      - Returns any values returned by the function being timed
+
+
+Python Sets
+- A data structure that guarantees that all of the elements that it contains are unique
+- Can be created by using curly brackets or by using the built-in "set()"
+- When creating an empty set, you have to use the built-in set function or it will create a dictionary {}
+- Elements can be added using the add() function in dot notation "a_set.add(value)"
+- Duplicate elements are ignored so that there can't be any duplicate values
+- Because sets are unordered, you can't use indexes and that's where hashing and stuff will come up later, everytime you run the set, there will be a new order
+- However, they can still be used in for each loops based on their lengths or their values, but they are not subscriptable
+- You can use the "in" keyword to see if a value is in a set
+In Keyword
+- Allows us to return True or False if a value is in a set
+
+
+Hashing, Hash Functions, and Hash Codes
+- A  hash function is a one-way function that given an input value produces a number as an output which is called a Hash Code
+- It's called a one_way function because you can't use the number to get the original value back
+- Given the same input value, a hash function will always produce the same output value, but it will change between runs. It's only consistent during the same run
+- These hash codes are used to store the elements in a specific index in an array
+
+
+Set Complexities
+- Arrays offer constant time access because the index of the element is always known and/or consistent
+- The complexity of maintaining an array and a list of unique elements over time is O(n²), because it has to search for duplicate values
+- Sets don't need to search itself so adding elements is O(n)
+- The time complexity/performance of a set depends on the hashing function used
+
+Set Theory
+- A field of math that deals exclusively with sets and the elements or members of those sets
+Axioms or Principles of Set Theory
+- ∅ - Null or Empty set, contains no elements i.e ∅ = {}
+- A ∈ B - Indicates that A is an element or member of B, set B contains A
+- A ⊂ B - Indicates that A is a subset of B, set B contains all the elements of set A
+- A ⊃ B - Indicates that A is a superset of B, set A contains all the elements of set B
+- A U B - The Union of sets A and B, a set that contains all elements of A and B
+- A ∩ B - The Intersection of sets A and B, a set that only contains the elements that are in both A and B, A = {1,2} and B = {2,3} so the intersection would be {2}
+- There are many more
+
+
+Encapsulation 
+- The process of keeping related data together in one place
+- Foreshadowing next unit
+
+Dictionaries
+- A collection of key:value pairs / Sequences of keys
+- Maintain the keys in insertion order
+- Somewhat like a list but uses keys instead of numeric indices
+- Those keys can be used to retrieve a value from the dictionary
+- Keys can be number, strings, and more
+- Like sets, this is also a hashing data structure
+- Dictionaries also don't allow duplicate keys, each one is unique
+- If a key is used to retrieve a value from a dictionary that's not in the dictionary, a KeyError is thrown, that's why you can use the in operator to check
+Creation
+- An empty dictionary can be created by using the builtin dict() function or by using a pair of empty curly brackets ( a_dictionary = { )
+- Can also be called literally by enclosing key:value pairs in curly brackets for ex. a_dictionary = {"one":1, "two":2 }
+- Or like this a_dictionary["three"] = 3
+Calling
+- Using the built in sorted function, you can make a sorted list from the keys in a dictionary
+- The .keys() function can be used to get a sequence of keys from the dictionary
+
+Collisions
+- When two different values are hashed into the same index in an array
+- There are an infinite number of possible inputs to a hash function but a finite number of possible outputs
+- The range of hash code values are limited by size of the integer in Python
+- This makes it possible for two values to have the same hash code, thus why they aren't reversible
+- The hash code is converted to an index with modulus
+Hash Functions
+- A good hash function is fast, meaning that it runs in constant time
+- It has to be consistent, it must always return the same hash code for the same input
+- It has to minimize collisions as they affect performance, this means that different inputs can't have the same output
+Resolving Collisions
+- Open Addressing - If a collision occurs when storing a value, it'll continue searching for the next open address to store the value 
+- Chaining - When a collision occurs at an index, the elements are stored in a list at each index
+- The more often collisions occur, the closer the time complexity gets to O(n) instead of O(1) because adding and finding an element requires linear search
+
